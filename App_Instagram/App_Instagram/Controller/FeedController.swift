@@ -5,4 +5,11 @@
 //  Created by Leticia Speda on 25/01/23.
 //
 
-import Foundation
+import UIKit
+
+final class FeedController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .blue
+    }
+}

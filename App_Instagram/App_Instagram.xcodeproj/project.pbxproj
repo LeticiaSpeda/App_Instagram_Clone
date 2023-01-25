@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		E079B9CF29807AF300E7D7C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9CE29807AF300E7D7C2 /* AppDelegate.swift */; };
 		E079B9D129807AF300E7D7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9D029807AF300E7D7C2 /* SceneDelegate.swift */; };
-		E079B9D329807AF300E7D7C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9D229807AF300E7D7C2 /* ViewController.swift */; };
-		E079B9D629807AF300E7D7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E079B9D429807AF300E7D7C2 /* Main.storyboard */; };
 		E079B9D829807AF400E7D7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E079B9D729807AF400E7D7C2 /* Assets.xcassets */; };
 		E079B9DB29807AF400E7D7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E079B9D929807AF400E7D7C2 /* LaunchScreen.storyboard */; };
+		E079B9E92981620500E7D7C2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9E82981620500E7D7C2 /* MainTabBarController.swift */; };
+		E079B9EB2981658B00E7D7C2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9EA2981658A00E7D7C2 /* FeedController.swift */; };
+		E079B9ED298165A500E7D7C2 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9EC298165A500E7D7C2 /* SearchController.swift */; };
+		E079B9EF298166E900E7D7C2 /* ImageSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9EE298166E900E7D7C2 /* ImageSelectController.swift */; };
+		E079B9F12981670700E7D7C2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F02981670700E7D7C2 /* NotificationController.swift */; };
+		E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F22981671A00E7D7C2 /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E079B9CB29807AF300E7D7C2 /* App_Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E079B9CE29807AF300E7D7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E079B9D029807AF300E7D7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E079B9D229807AF300E7D7C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E079B9D529807AF300E7D7C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E079B9D729807AF400E7D7C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E079B9DA29807AF400E7D7C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E079B9DC29807AF400E7D7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E079B9E82981620500E7D7C2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		E079B9EA2981658A00E7D7C2 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		E079B9EC298165A500E7D7C2 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		E079B9EE298166E900E7D7C2 /* ImageSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectController.swift; sourceTree = "<group>"; };
+		E079B9F02981670700E7D7C2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E079B9F22981671A00E7D7C2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				E079B9CD29807AF300E7D7C2 /* App_Instagram */,
+				E079B9E329807B4300E7D7C2 /* Aplication */,
+				E079B9E229807B0200E7D7C2 /* Assets */,
 				E079B9CC29807AF300E7D7C2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +66,65 @@
 		E079B9CD29807AF300E7D7C2 /* App_Instagram */ = {
 			isa = PBXGroup;
 			children = (
-				E079B9CE29807AF300E7D7C2 /* AppDelegate.swift */,
-				E079B9D029807AF300E7D7C2 /* SceneDelegate.swift */,
-				E079B9D229807AF300E7D7C2 /* ViewController.swift */,
-				E079B9D429807AF300E7D7C2 /* Main.storyboard */,
-				E079B9D729807AF400E7D7C2 /* Assets.xcassets */,
-				E079B9D929807AF400E7D7C2 /* LaunchScreen.storyboard */,
+				E079B9E6298161A000E7D7C2 /* View */,
+				E079B9E7298161A900E7D7C2 /* Controller */,
+				E079B9E52981617300E7D7C2 /* ViewModel */,
+				E079B9E42981615900E7D7C2 /* Model */,
 				E079B9DC29807AF400E7D7C2 /* Info.plist */,
 			);
 			path = App_Instagram;
+			sourceTree = "<group>";
+		};
+		E079B9E229807B0200E7D7C2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E079B9D729807AF400E7D7C2 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E079B9E329807B4300E7D7C2 /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				E079B9D929807AF400E7D7C2 /* LaunchScreen.storyboard */,
+				E079B9CE29807AF300E7D7C2 /* AppDelegate.swift */,
+				E079B9D029807AF300E7D7C2 /* SceneDelegate.swift */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		E079B9E42981615900E7D7C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E079B9E52981617300E7D7C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E079B9E6298161A000E7D7C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E079B9E7298161A900E7D7C2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E079B9E82981620500E7D7C2 /* MainTabBarController.swift */,
+				E079B9EA2981658A00E7D7C2 /* FeedController.swift */,
+				E079B9EC298165A500E7D7C2 /* SearchController.swift */,
+				E079B9EE298166E900E7D7C2 /* ImageSelectController.swift */,
+				E079B9F02981670700E7D7C2 /* NotificationController.swift */,
+				E079B9F22981671A00E7D7C2 /* ProfileController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +187,6 @@
 			files = (
 				E079B9DB29807AF400E7D7C2 /* LaunchScreen.storyboard in Resources */,
 				E079B9D829807AF400E7D7C2 /* Assets.xcassets in Resources */,
-				E079B9D629807AF300E7D7C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E079B9D329807AF300E7D7C2 /* ViewController.swift in Sources */,
+				E079B9ED298165A500E7D7C2 /* SearchController.swift in Sources */,
+				E079B9F12981670700E7D7C2 /* NotificationController.swift in Sources */,
 				E079B9CF29807AF300E7D7C2 /* AppDelegate.swift in Sources */,
+				E079B9EB2981658B00E7D7C2 /* FeedController.swift in Sources */,
+				E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */,
+				E079B9EF298166E900E7D7C2 /* ImageSelectController.swift in Sources */,
+				E079B9E92981620500E7D7C2 /* MainTabBarController.swift in Sources */,
 				E079B9D129807AF300E7D7C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +211,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E079B9D429807AF300E7D7C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E079B9D529807AF300E7D7C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E079B9D929807AF400E7D7C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,8 +347,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App_Instagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.spedaLeticia.App-Instagram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,8 +377,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = App_Instagram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,9 +387,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.spedaLeticia.App-Instagram";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
