@@ -27,7 +27,7 @@ final class MainTabBarController: UITabBarController {
         
         let imageSelector = templateNavigationController(unselectedImage: UIImage(named: "plus_unselected") ?? UIImage(), selectedImage: UIImage(named: "plus_unselected") ?? UIImage(), rootViewController: ImageSelectorController())
         
-        let notifications = templateNavigationController(unselectedImage: UIImage(named: "like_unselected") ?? UIImage(), selectedImage: UIImage(named: "like_unselected") ?? UIImage(), rootViewController: NotificationController())
+        let notifications = templateNavigationController(unselectedImage: UIImage(named: "like_selected") ?? UIImage(), selectedImage: UIImage(named: "like_selected") ?? UIImage(), rootViewController: NotificationController())
         
         let profile = templateNavigationController(unselectedImage: UIImage(named: "profile_selected") ?? UIImage(), selectedImage: UIImage(named: "profile_selected") ?? UIImage(), rootViewController: ProfileController())
         
@@ -36,6 +36,7 @@ final class MainTabBarController: UITabBarController {
     
     private func configureStyle() {
         tabBar.backgroundColor = .white.withAlphaComponent(0.8)
+        tabBar.tintColor = .black
     }
     
     private func templateNavigationController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController)-> UINavigationController {
