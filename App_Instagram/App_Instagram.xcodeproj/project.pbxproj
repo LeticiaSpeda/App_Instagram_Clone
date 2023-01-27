@@ -68,9 +68,9 @@
 			children = (
 				E079B9E6298161A000E7D7C2 /* View */,
 				E079B9E7298161A900E7D7C2 /* Controller */,
+				E079B9DC29807AF400E7D7C2 /* Info.plist */,
 				E079B9E52981617300E7D7C2 /* ViewModel */,
 				E079B9E42981615900E7D7C2 /* Model */,
-				E079B9DC29807AF400E7D7C2 /* Info.plist */,
 			);
 			path = App_Instagram;
 			sourceTree = "<group>";
