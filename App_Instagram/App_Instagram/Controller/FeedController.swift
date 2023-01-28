@@ -22,7 +22,7 @@ final class FeedController: UICollectionViewController, Reusable {
     }
     
     private func configureUI() {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: FeedController.identifier)
+        collectionView.register(FeedCell.self, forCellWithReuseIdentifier: FeedController.identifier)
     }
     
     private func configureStyle() {
@@ -30,19 +30,18 @@ final class FeedController: UICollectionViewController, Reusable {
     }
 }
 
-//MARK: UiCollectionViewDataSource
+//MARK: - UiCollectionViewDataSource
 extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedController.identifier, for: indexPath)
-        cell.backgroundColor = .red
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedController.identifier, for: indexPath) as! FeedCell
         return cell
     }
 }
-
+//MARK: - UICollectionViewDelegateFlowLayout
 extension FeedController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 200)
