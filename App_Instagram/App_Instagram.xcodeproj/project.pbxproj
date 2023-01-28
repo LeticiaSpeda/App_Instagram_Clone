@@ -18,6 +18,8 @@
 		E079B9F12981670700E7D7C2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F02981670700E7D7C2 /* NotificationController.swift */; };
 		E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F22981671A00E7D7C2 /* ProfileController.swift */; };
 		E079B9F6298570C600E7D7C2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F5298570C600E7D7C2 /* Reusable.swift */; };
+		E079B9F82985751300E7D7C2 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F72985751300E7D7C2 /* FeedCell.swift */; };
+		E079B9FC298576C000E7D7C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9FB298576C000E7D7C2 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		E079B9F02981670700E7D7C2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		E079B9F22981671A00E7D7C2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		E079B9F5298570C600E7D7C2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		E079B9F72985751300E7D7C2 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		E079B9FB298576C000E7D7C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				E079B9DC29807AF400E7D7C2 /* Info.plist */,
 				E079B9E52981617300E7D7C2 /* ViewModel */,
 				E079B9E42981615900E7D7C2 /* Model */,
+				E079B9F92985768500E7D7C2 /* API */,
+				E079B9FA2985768C00E7D7C2 /* Utils */,
 			);
 			path = App_Instagram;
 			sourceTree = "<group>";
@@ -113,6 +119,7 @@
 		E079B9E6298161A000E7D7C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E079B9F72985751300E7D7C2 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +143,21 @@
 				E079B9F5298570C600E7D7C2 /* Reusable.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		E079B9F92985768500E7D7C2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E079B9FA2985768C00E7D7C2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E079B9FB298576C000E7D7C2 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E079B9ED298165A500E7D7C2 /* SearchController.swift in Sources */,
+				E079B9F82985751300E7D7C2 /* FeedCell.swift in Sources */,
 				E079B9F12981670700E7D7C2 /* NotificationController.swift in Sources */,
 				E079B9CF29807AF300E7D7C2 /* AppDelegate.swift in Sources */,
 				E079B9F6298570C600E7D7C2 /* Reusable.swift in Sources */,
@@ -216,6 +239,7 @@
 				E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */,
 				E079B9EF298166E900E7D7C2 /* ImageSelectController.swift in Sources */,
 				E079B9E92981620500E7D7C2 /* MainTabBarController.swift in Sources */,
+				E079B9FC298576C000E7D7C2 /* Extensions.swift in Sources */,
 				E079B9D129807AF300E7D7C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
