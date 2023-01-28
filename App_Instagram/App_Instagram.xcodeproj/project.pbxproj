@@ -17,6 +17,7 @@
 		E079B9EF298166E900E7D7C2 /* ImageSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9EE298166E900E7D7C2 /* ImageSelectController.swift */; };
 		E079B9F12981670700E7D7C2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F02981670700E7D7C2 /* NotificationController.swift */; };
 		E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F22981671A00E7D7C2 /* ProfileController.swift */; };
+		E079B9F6298570C600E7D7C2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F5298570C600E7D7C2 /* Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E079B9EE298166E900E7D7C2 /* ImageSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectController.swift; sourceTree = "<group>"; };
 		E079B9F02981670700E7D7C2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		E079B9F22981671A00E7D7C2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		E079B9F5298570C600E7D7C2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				E079B9E6298161A000E7D7C2 /* View */,
 				E079B9E7298161A900E7D7C2 /* Controller */,
+				E079B9F4298570B400E7D7C2 /* Commons */,
 				E079B9DC29807AF400E7D7C2 /* Info.plist */,
 				E079B9E52981617300E7D7C2 /* ViewModel */,
 				E079B9E42981615900E7D7C2 /* Model */,
@@ -125,6 +128,14 @@
 				E079B9F22981671A00E7D7C2 /* ProfileController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E079B9F4298570B400E7D7C2 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E079B9F5298570C600E7D7C2 /* Reusable.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 				E079B9ED298165A500E7D7C2 /* SearchController.swift in Sources */,
 				E079B9F12981670700E7D7C2 /* NotificationController.swift in Sources */,
 				E079B9CF29807AF300E7D7C2 /* AppDelegate.swift in Sources */,
+				E079B9F6298570C600E7D7C2 /* Reusable.swift in Sources */,
 				E079B9EB2981658B00E7D7C2 /* FeedController.swift in Sources */,
 				E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */,
 				E079B9EF298166E900E7D7C2 /* ImageSelectController.swift in Sources */,
