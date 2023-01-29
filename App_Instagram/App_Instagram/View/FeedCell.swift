@@ -22,6 +22,16 @@ final class FeedCell: UICollectionViewCell {
         return view
     }()
     
+    
+    private lazy var usernameButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("venom", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
+        button.addTarget(self, action: #selector(didTapUserName), for: .touchUpInside)
+        return button
+    }()
+    
     //MARK: - LifeCycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,6 +42,12 @@ final class FeedCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    //MARK: - Action
+    @objc func didTapUserName() {
+        print("DEBUG: DID TAP")
+    }
+    
     private func commoninit() {
         configureHierarchy()
         configureConstraints()
@@ -40,15 +56,19 @@ final class FeedCell: UICollectionViewCell {
     
     private func configureHierarchy() {
         addSubview(profileImageView)
+        addSubview(usernameButton)
     }
     
     private func configureConstraints() {
-        profileImageView.anchor(
-            top: topAnchor,
-            left: leftAnchor,
-            paddingTop: 12,
-            paddingLeft: 12)
+        profileImageView.anchor(top: topAnchor,
+                                left: leftAnchor,
+                                paddingTop: 12,
+                                paddingLeft: 12)
         profileImageView.anchor(width: 40, height: 40)
+        
+        usernameButton.centerY(inView: profileImageView,
+                               leftAnchor: profileImageView.rightAnchor,
+                               paddingLeft: 8)
         
     }
 
