@@ -80,4 +80,8 @@ extension UIView {
             anchor(left: left, paddingLeft: paddingLeft)
         }
     }
+    
+    func enableCode() {
+        translatesAutoresizingMaskIntoConstraints = false
+    }
 }
