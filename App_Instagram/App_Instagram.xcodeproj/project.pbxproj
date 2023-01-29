@@ -19,7 +19,7 @@
 		E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F22981671A00E7D7C2 /* ProfileController.swift */; };
 		E079B9F6298570C600E7D7C2 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F5298570C600E7D7C2 /* Reusable.swift */; };
 		E079B9F82985751300E7D7C2 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9F72985751300E7D7C2 /* FeedCell.swift */; };
-		E079B9FC298576C000E7D7C2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9FB298576C000E7D7C2 /* Extensions.swift */; };
+		E079B9FC298576C000E7D7C2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9FB298576C000E7D7C2 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		E079B9F22981671A00E7D7C2 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		E079B9F5298570C600E7D7C2 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		E079B9F72985751300E7D7C2 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
-		E079B9FB298576C000E7D7C2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E079B9FB298576C000E7D7C2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 		E079B9FA2985768C00E7D7C2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E079B9FB298576C000E7D7C2 /* Extensions.swift */,
+				E079B9FB298576C000E7D7C2 /* UIView+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 				E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */,
 				E079B9EF298166E900E7D7C2 /* ImageSelectController.swift in Sources */,
 				E079B9E92981620500E7D7C2 /* MainTabBarController.swift in Sources */,
-				E079B9FC298576C000E7D7C2 /* Extensions.swift in Sources */,
+				E079B9FC298576C000E7D7C2 /* UIView+Extensions.swift in Sources */,
 				E079B9D129807AF300E7D7C2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
