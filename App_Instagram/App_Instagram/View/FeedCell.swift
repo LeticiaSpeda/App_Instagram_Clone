@@ -68,14 +68,14 @@ final class FeedCell: UICollectionViewCell {
     private lazy var likesLabel: UILabel = {
         let label = UILabel()
         label.text = "1 like"
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     private lazy var captionLabel: UILabel = {
         let label = UILabel()
         label.text = "Some test caption for now..."
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     
@@ -136,13 +136,28 @@ final class FeedCell: UICollectionViewCell {
                                leftAnchor: profileImageView.rightAnchor,
                                paddingLeft: 8)
         
-        postImageView.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8)
+        postImageView.anchor(
+            top: profileImageView.bottomAnchor,
+            left: leftAnchor,
+            right: rightAnchor,
+            paddingTop: 8
+        )
         postImageView.heightAnchor.constraint(
             equalTo: widthAnchor,
             multiplier: 1
         ).isActive = true
         
-        mainHStack.anchor(top: postImageView.bottomAnchor, width: 120, height: 50)
+        mainHStack.anchor(
+            top: postImageView.bottomAnchor,
+            width: 120,
+            height: 50
+        )
+        
+        likesLabel.anchor(top: likeButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
+        
+        captionLabel.anchor(top: likesLabel.bottomAnchor, left:  leftAnchor, paddingTop: 8, paddingLeft: 8)
+        
+        postTimeLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
     }
     
     private func configureStyle() {
