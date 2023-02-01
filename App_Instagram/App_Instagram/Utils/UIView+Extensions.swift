@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+ 
 extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil,
                 left: NSLayoutXAxisAnchor? = nil,
@@ -83,5 +83,28 @@ extension UIView {
     
     func enableCode() {
         translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func setDimensions(height: CGFloat, width: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+        widthAnchor.constraint(equalToConstant: width).isActive = true
+    }
+    
+    func setHeight(_ height: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+    
+    func setWidth(_ width: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: width).isActive = true
+    }
+    
+    func fillSuperview() {
+        translatesAutoresizingMaskIntoConstraints = false
+        guard let view = superview else { return }
+        anchor(top: view.topAnchor, left: view.leftAnchor,
+               bottom: view.bottomAnchor, right: view.rightAnchor)
     }
 }
