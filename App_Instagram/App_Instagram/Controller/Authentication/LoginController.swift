@@ -26,7 +26,8 @@ final class LoginController: UIViewController {
         tf.keyboardType = .emailAddress
         tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
         tf.setHeight(50)
-        tf.attributedPlaceholder = NSAttributedString(string: "email", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        tf.layer.cornerRadius = 8
+        tf.attributedPlaceholder = NSAttributedString(string: " Email", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
     
@@ -38,15 +39,38 @@ final class LoginController: UIViewController {
         tf.keyboardType = .emailAddress
         tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
         tf.setHeight(50)
-        tf.attributedPlaceholder = NSAttributedString(string: "password", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
+        tf.layer.cornerRadius = 8
+        tf.attributedPlaceholder = NSAttributedString(string: " Password", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         tf.isSecureTextEntry = true
         return tf
     }()
     
+    private lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Log in", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue.withAlphaComponent(0.3)
+        button.layer.cornerRadius = 8
+        button.setHeight(50)
+        return button
+    }()
+    
+    
+    private lazy var donHaveAccountButton: UIButton = {
+        let button = UIButton()
+        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.systemFont(ofSize: 16)]
+        let attributedTitle = NSMutableAttributedString(string: "Don't haver an account? ", attributes: atts)
+        let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: 16)]
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: boldAtts))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
+    }()
+    
     private lazy var mainVStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField  ])
+        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
         stack.axis = .vertical
-        stack.spacing = 5
+        stack.spacing = 20
         return stack
     }()
     
@@ -64,12 +88,18 @@ final class LoginController: UIViewController {
     
     private func configureHierarchy(){
         view.addSubview(iconImage)
+        view.addSubview(mainVStack)
+        view.addSubview(donHaveAccountButton)
     }
     
     private func configureConstraints() {
         iconImage.centerX(inView: view)
         iconImage.setDimensions(height: 80, width: 120)
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
+        mainVStack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: -32)
+        
+        donHaveAccountButton.centerX(inView: view)
+        donHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
     
     private func configureStyle() {
