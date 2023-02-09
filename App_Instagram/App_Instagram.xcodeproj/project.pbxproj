@@ -22,6 +22,8 @@
 		E079B9FC298576C000E7D7C2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E079B9FB298576C000E7D7C2 /* UIView+Extensions.swift */; };
 		E0E1142D2989AB5F00D7EE16 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1142C2989AB5F00D7EE16 /* LoginController.swift */; };
 		E0E1142F2989ABA600D7EE16 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1142E2989ABA600D7EE16 /* RegistrationController.swift */; };
+		E0E1143129952A3100D7EE16 /* CustonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1143029952A3100D7EE16 /* CustonTextField.swift */; };
+		E0E114332995313300D7EE16 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E114322995313300D7EE16 /* UIButton+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		E079B9FB298576C000E7D7C2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		E0E1142C2989AB5F00D7EE16 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		E0E1142E2989ABA600D7EE16 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		E0E1143029952A3100D7EE16 /* CustonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonTextField.swift; sourceTree = "<group>"; };
+		E0E114322995313300D7EE16 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E079B9F72985751300E7D7C2 /* FeedCell.swift */,
+				E0E1143029952A3100D7EE16 /* CustonTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				E079B9FB298576C000E7D7C2 /* UIView+Extensions.swift */,
+				E0E114322995313300D7EE16 /* UIButton+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -251,11 +257,13 @@
 				E079B9CF29807AF300E7D7C2 /* AppDelegate.swift in Sources */,
 				E079B9F6298570C600E7D7C2 /* Reusable.swift in Sources */,
 				E079B9EB2981658B00E7D7C2 /* FeedController.swift in Sources */,
+				E0E1143129952A3100D7EE16 /* CustonTextField.swift in Sources */,
 				E079B9F32981671A00E7D7C2 /* ProfileController.swift in Sources */,
 				E079B9EF298166E900E7D7C2 /* ImageSelectController.swift in Sources */,
 				E079B9E92981620500E7D7C2 /* MainTabBarController.swift in Sources */,
 				E079B9FC298576C000E7D7C2 /* UIView+Extensions.swift in Sources */,
 				E079B9D129807AF300E7D7C2 /* SceneDelegate.swift in Sources */,
+				E0E114332995313300D7EE16 /* UIButton+Extensions.swift in Sources */,
 				E0E1142F2989ABA600D7EE16 /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
