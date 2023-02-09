@@ -18,30 +18,15 @@ final class LoginController: UIViewController {
         return view
     }()
     
-    private lazy var emailTextField: UITextField = {
-        let tf = UITextField()
-        tf.borderStyle = .none
-        tf.textColor = .white
-        tf.keyboardAppearance = .dark
+    private lazy var emailTextField: CustonTextField = {
+        let tf = CustonTextField(placeholder: " Email")
         tf.keyboardType = .emailAddress
-        tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
-        tf.setHeight(50)
-        tf.layer.cornerRadius = 8
-        tf.attributedPlaceholder = NSAttributedString(string: " Email", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
         return tf
     }()
     
-    private lazy var passwordTextField: UITextField = {
-        let tf = UITextField()
-        tf.borderStyle = .none
-        tf.textColor = .white
-        tf.keyboardAppearance = .dark
+    private lazy var passwordTextField: CustonTextField = {
+        let tf = CustonTextField(placeholder: " Password")
         tf.keyboardType = .emailAddress
-        tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
-        tf.setHeight(50)
-        tf.layer.cornerRadius = 8
-        tf.attributedPlaceholder = NSAttributedString(string: " Password", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
-        tf.isSecureTextEntry = true
         return tf
     }()
     
@@ -58,20 +43,12 @@ final class LoginController: UIViewController {
     
     private lazy var forgotPasswordButton: UIButton = {
         let button = UIButton()
-        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.6), .font: UIFont.systemFont(ofSize: 16)]
-        let attributedTitle = NSMutableAttributedString(string: "Forgot you password?", attributes: atts)
-        let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: 16)]
-        attributedTitle.append(NSAttributedString(string: " Get help signing in", attributes: boldAtts))
-        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.attributedTitle(firstPart: "Forgot you password?", secondPart: " Get help signing in")
         return button
     }()
     private lazy var dontHaveAccountButton: UIButton = {
         let button = UIButton()
-        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.6), .font: UIFont.systemFont(ofSize: 16)]
-        let attributedTitle = NSMutableAttributedString(string: "Don't haver an account? ", attributes: atts)
-        let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: 16)]
-        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: boldAtts))
-        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.attributedTitle(firstPart: "Don't haver an account? ", secondPart: "Sign Up")
         return button
     }()
     
