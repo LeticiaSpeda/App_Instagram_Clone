@@ -56,10 +56,18 @@ final class LoginController: UIViewController {
         return button
     }()
     
-    
-    private lazy var donHaveAccountButton: UIButton = {
+    private lazy var forgotPasswordButton: UIButton = {
         let button = UIButton()
-        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.systemFont(ofSize: 16)]
+        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.6), .font: UIFont.systemFont(ofSize: 16)]
+        let attributedTitle = NSMutableAttributedString(string: "Forgot you password?", attributes: atts)
+        let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: 16)]
+        attributedTitle.append(NSAttributedString(string: " Get help signing in", attributes: boldAtts))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
+    }()
+    private lazy var dontHaveAccountButton: UIButton = {
+        let button = UIButton()
+        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.6), .font: UIFont.systemFont(ofSize: 16)]
         let attributedTitle = NSMutableAttributedString(string: "Don't haver an account? ", attributes: atts)
         let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.boldSystemFont(ofSize: 16)]
         attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: boldAtts))
@@ -68,7 +76,7 @@ final class LoginController: UIViewController {
     }()
     
     private lazy var mainVStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
+        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, forgotPasswordButton])
         stack.axis = .vertical
         stack.spacing = 20
         return stack
@@ -89,7 +97,7 @@ final class LoginController: UIViewController {
     private func configureHierarchy(){
         view.addSubview(iconImage)
         view.addSubview(mainVStack)
-        view.addSubview(donHaveAccountButton)
+        view.addSubview(dontHaveAccountButton)
     }
     
     private func configureConstraints() {
@@ -98,8 +106,8 @@ final class LoginController: UIViewController {
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         mainVStack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: -32)
         
-        donHaveAccountButton.centerX(inView: view)
-        donHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        dontHaveAccountButton.centerX(inView: view)
+        dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
     
     private func configureStyle() {
