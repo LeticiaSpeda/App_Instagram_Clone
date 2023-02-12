@@ -6,6 +6,16 @@
 //
 
 import UIKit
+import SwiftUI
+import SwiftPreview
+
+struct Login_PreviewProvider: PreviewProvider {
+    static var previews: some View {
+        UIViewControllerPreview {
+            LoginController()
+        }
+    }
+}
 
 final class LoginController: UIViewController {
     
@@ -35,8 +45,8 @@ final class LoginController: UIViewController {
         button.setTitle("Log in", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .blue.withAlphaComponent(0.3)
         button.layer.cornerRadius = 8
+        button.backgroundColor = .blue.withAlphaComponent(0.4)
         button.setHeight(50)
         return button
     }()
@@ -49,6 +59,7 @@ final class LoginController: UIViewController {
     private lazy var dontHaveAccountButton: UIButton = {
         let button = UIButton()
         button.attributedTitle(firstPart: "Don't haver an account? ", secondPart: "Sign Up")
+        button.addTarget(self, action: #selector(handleShowSingUp), for: .touchUpInside)
         return button
     }()
     
@@ -71,6 +82,12 @@ final class LoginController: UIViewController {
         configureConstraints()
     }
     
+    //MARK: - Actions
+    @objc func handleShowSingUp() {
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
     private func configureHierarchy(){
         view.addSubview(iconImage)
         view.addSubview(mainVStack)
@@ -88,14 +105,9 @@ final class LoginController: UIViewController {
     }
     
     private func configureStyle() {
+        configureGradienteLayer()
         view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
-        
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemBlue.cgColor]
-        gradient.locations = [0,1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
     }
 }
