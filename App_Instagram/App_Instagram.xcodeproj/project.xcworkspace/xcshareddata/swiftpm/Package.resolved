@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftpreview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/heoblitz/SwiftPreview",
+      "state" : {
+        "revision" : "812ec38c4b06383d1a37cbc71c9c8b8df98f96c0",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
