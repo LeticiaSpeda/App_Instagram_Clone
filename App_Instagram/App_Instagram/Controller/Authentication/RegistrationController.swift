@@ -63,10 +63,22 @@ final class RegistrationController: UIViewController {
         return button
     }()
     
+    private lazy var AlreadyHaveAccountButton: UIButton = {
+        let button = UIButton()
+        button.attributedTitle(firstPart: "Already haver an account? ", secondPart: "Sign Up")
+        button.addTarget(self, action: #selector(handleShowLogin), for: .touchUpInside)
+        return button
+    }()
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+    }
+    
+    //MARK: - Actions
+    @objc func handleShowLogin() {
+        navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Helpers
@@ -79,6 +91,7 @@ final class RegistrationController: UIViewController {
     private func configureHierarchy() {
         view.addSubview(plusPhotoButton)
         view.addSubview(mainVStack)
+        view.addSubview(AlreadyHaveAccountButton)
     }
     
     private func configureConstraints() {
@@ -87,6 +100,9 @@ final class RegistrationController: UIViewController {
         plusPhotoButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         
         mainVStack.anchor(top: plusPhotoButton.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: -32)
+        
+        AlreadyHaveAccountButton.centerX(inView: view)
+        AlreadyHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
         
     }
     
