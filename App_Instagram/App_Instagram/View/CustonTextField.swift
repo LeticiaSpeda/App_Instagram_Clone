@@ -24,12 +24,13 @@ final class CustonTextField: UITextField {
         backgroundColor = UIColor(white: 1, alpha: 0.1)
         setHeight(50)
         layer.cornerRadius = 8
-        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
-        isSecureTextEntry = true
+        attributedPlaceholder = NSAttributedString(
+            string: placeholder,
+            attributes: [
+                .foregroundColor: UIColor(white: 1, alpha: 0.7)
+            ])
     }
     
     required init?(coder: NSCoder) { nil }
-    
-    
     
 }
