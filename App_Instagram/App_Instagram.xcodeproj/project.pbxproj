@@ -26,6 +26,7 @@
 		E0E114332995313300D7EE16 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E114322995313300D7EE16 /* UIButton+Extensions.swift */; };
 		E0E11435299535D100D7EE16 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E11434299535D100D7EE16 /* UIViewController+Extensions.swift */; };
 		E0E1143829968D7300D7EE16 /* SwiftPreview in Frameworks */ = {isa = PBXBuildFile; productRef = E0E1143729968D7300D7EE16 /* SwiftPreview */; };
+		E0E1143A29998C5800D7EE16 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E1143929998C5800D7EE16 /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		E0E1143029952A3100D7EE16 /* CustonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustonTextField.swift; sourceTree = "<group>"; };
 		E0E114322995313300D7EE16 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		E0E11434299535D100D7EE16 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		E0E1143929998C5800D7EE16 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,12 +88,12 @@
 			children = (
 				E079B9E6298161A000E7D7C2 /* View */,
 				E079B9E7298161A900E7D7C2 /* Controller */,
-				E079B9F4298570B400E7D7C2 /* Commons */,
-				E079B9DC29807AF400E7D7C2 /* Info.plist */,
 				E079B9E52981617300E7D7C2 /* ViewModel */,
 				E079B9E42981615900E7D7C2 /* Model */,
 				E079B9F92985768500E7D7C2 /* API */,
 				E079B9FA2985768C00E7D7C2 /* Utils */,
+				E079B9F4298570B400E7D7C2 /* Commons */,
+				E079B9DC29807AF400E7D7C2 /* Info.plist */,
 			);
 			path = App_Instagram;
 			sourceTree = "<group>";
@@ -124,6 +126,7 @@
 		E079B9E52981617300E7D7C2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E0E1143929998C5800D7EE16 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				E079B9ED298165A500E7D7C2 /* SearchController.swift in Sources */,
 				E0E1142D2989AB5F00D7EE16 /* LoginController.swift in Sources */,
+				E0E1143A29998C5800D7EE16 /* AuthenticationViewModel.swift in Sources */,
 				E079B9F82985751300E7D7C2 /* FeedCell.swift in Sources */,
 				E079B9F12981670700E7D7C2 /* NotificationController.swift in Sources */,
 				E079B9CF29807AF300E7D7C2 /* AppDelegate.swift in Sources */,
