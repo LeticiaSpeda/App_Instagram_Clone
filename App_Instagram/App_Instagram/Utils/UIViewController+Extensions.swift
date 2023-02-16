@@ -10,7 +10,12 @@ import UIKit
 extension UIViewController {
     func configureGradienteLayer() {
         let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor, UIColor.systemPink.cgColor, UIColor.systemOrange.cgColor, UIColor.systemYellow.cgColor]
+        gradient.colors = [
+            UIColor.systemPurple.cgColor,
+            UIColor.systemPink.cgColor,
+            UIColor.systemOrange.cgColor,
+            UIColor.systemYellow.cgColor
+        ]
         gradient.locations = [0,1]
         view.layer.addSublayer(gradient)
         gradient.frame = view.frame
