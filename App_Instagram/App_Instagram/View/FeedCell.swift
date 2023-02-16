@@ -88,7 +88,12 @@ final class FeedCell: UICollectionViewCell {
     }()
     
     private lazy var mainHStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [likeButton,commentButton,shareButton])
+        let stack = UIStackView(
+            arrangedSubviews: [
+                likeButton,
+                commentButton,
+                shareButton
+            ])
         stack.axis = .horizontal
         stack.distribution = .fillEqually
         return stack
@@ -126,15 +131,19 @@ final class FeedCell: UICollectionViewCell {
     }
     
     private func configureConstraints() {
-        profileImageView.anchor(top: topAnchor,
-                                left: leftAnchor,
-                                paddingTop: 12,
-                                paddingLeft: 12)
+        profileImageView.anchor(
+            top: topAnchor,
+            left: leftAnchor,
+            paddingTop: 12,
+            paddingLeft: 12
+        )
         profileImageView.anchor(width: 40, height: 40)
         
-        usernameButton.centerY(inView: profileImageView,
-                               leftAnchor: profileImageView.rightAnchor,
-                               paddingLeft: 8)
+        usernameButton.centerY(
+            inView:profileImageView,
+            leftAnchor:profileImageView.rightAnchor,
+            paddingLeft: 8
+        )
         
         postImageView.anchor(
             top: profileImageView.bottomAnchor,
@@ -153,11 +162,26 @@ final class FeedCell: UICollectionViewCell {
             height: 50
         )
         
-        likesLabel.anchor(top: likeButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
+        likesLabel.anchor(
+            top: likeButton.bottomAnchor,
+            left: leftAnchor,
+            paddingTop: -4,
+            paddingLeft: 8
+        )
         
-        captionLabel.anchor(top: likesLabel.bottomAnchor, left:  leftAnchor, paddingTop: 8, paddingLeft: 8)
+        captionLabel.anchor(
+            top: likesLabel.bottomAnchor,
+            left:  leftAnchor,
+            paddingTop: 8,
+            paddingLeft: 8
+        )
         
-        postTimeLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
+        postTimeLabel.anchor(
+            top: captionLabel.bottomAnchor,
+            left: leftAnchor,
+            paddingTop: 8,
+            paddingLeft: 8
+        )
     }
     
     private func configureStyle() {
