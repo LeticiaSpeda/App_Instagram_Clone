@@ -93,6 +93,9 @@ final class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+        viewModel.email = ""
+        viewModel.password = ""
+        updateForm()
     }
     //MARK: - Helpers
     private func commonInit() {
@@ -114,11 +117,7 @@ final class LoginController: UIViewController {
         } else {
             viewModel.password = sender.text
         }
-        
-        loginButton.backgroundColor = viewModel.buttomBackgroundColor
-        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
-        loginButton.isEnabled = viewModel.formIsValid
-        
+        updateForm()
     }
     
     private func configureHierarchy(){
@@ -164,4 +163,12 @@ final class LoginController: UIViewController {
         passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     }
     
+}
+//MARK: - FormViewModel
+extension LoginController: FormViewModel {
+    func updateForm() {
+        loginButton.backgroundColor = viewModel.buttonBackgrounColor
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewModel.formIsValid
+    }
 }
