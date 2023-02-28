@@ -20,6 +20,7 @@ struct Register_PreviewProvider: PreviewProvider {
 final class RegistrationController: UIViewController {
     
     //MARK: - Properties
+    private var viewModel = RegistrationViewModel()
     
     private lazy var mainVStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [
@@ -27,7 +28,7 @@ final class RegistrationController: UIViewController {
             passwordTextField,
             fullNameTextField,
             userNameTextField,
-            singUpButton
+            signUpButton
         ])
         stack.axis = .vertical
         stack.spacing = 20
@@ -41,6 +42,11 @@ final class RegistrationController: UIViewController {
         let button = UIButton()
         button.setImage(image, for: .normal)
         button.tintColor = UIColor.white
+        button.addTarget(
+            self,
+            action: #selector(handleProfilePhotoSelect),
+            for: .touchUpInside
+        )
         return button
     }()
     
@@ -53,6 +59,7 @@ final class RegistrationController: UIViewController {
     private lazy var passwordTextField: CustonTextField = {
         let tf = CustonTextField(placeholder: " Password")
         tf.keyboardType = .emailAddress
+        tf.isSecureTextEntry = true
         return tf
     }()
     
@@ -64,7 +71,7 @@ final class RegistrationController: UIViewController {
         placeholder: "UserName"
     )
     
-    private lazy var singUpButton: UIButton = {
+    private lazy var signUpButton: UIButton = {
         let button = UIButton()
         button.setTitle("Sing Up", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
@@ -100,11 +107,33 @@ final class RegistrationController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func textDidChange(sender: UITextField) {
+        if sender === emailTextField {
+            viewModel.email = sender.text
+        } else if sender === passwordTextField {
+            viewModel.password = sender.text
+        } else if sender === fullNameTextField {
+            viewModel.fullname = sender.text
+        } else {
+            viewModel.username = sender.text
+        }
+        
+        updateForm()
+    }
+    
+    @objc func handleProfilePhotoSelect() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true)
+    }
+    
     //MARK: - Helpers
     private func commonInit() {
         configureStyle()
         configureHierarchy()
         configureConstraints()
+        configureNotificationObservers()
     }
     
     private func configureHierarchy() {
@@ -134,10 +163,46 @@ final class RegistrationController: UIViewController {
         AlreadyHaveAccountButton.anchor(
             bottom: view.safeAreaLayoutGuide.bottomAnchor
         )
-        
     }
     
     private func configureStyle() {
         configureGradienteLayer()
+    }
+    
+    private func configureNotificationObservers(){
+        emailTextField.addTarget(
+            self,
+            action: #selector(textDidChange),
+            for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fullNameTextField.addTarget(
+            self,
+            action: #selector(textDidChange),
+            for: .editingChanged)
+        userNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+}
+
+//MARK: - FormViewModel
+extension RegistrationController: FormViewModel {
+    func updateForm() {
+        signUpButton.backgroundColor = viewModel.buttonBackgrounColor
+        signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        signUpButton.isEnabled = viewModel.formIsValid
+    }
+}
+
+//MARK: - UIImagePickerControllerDelegate
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let selectImage = info[.editedImage] as? UIImage else { return }
+        
+        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.layer.borderWidth = 2
+        plusPhotoButton.layer.borderColor = UIColor.white.cgColor
+        plusPhotoButton.setImage(selectImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        dismiss(animated: true)
     }
 }
