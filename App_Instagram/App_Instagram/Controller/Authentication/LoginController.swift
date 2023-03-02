@@ -160,7 +160,11 @@ final class LoginController: UIViewController {
             self,
             action: #selector(textDidChange),
             for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(
+            self,
+            action: #selector(textDidChange),
+            for: .editingChanged
+        )
     }
     
 }
