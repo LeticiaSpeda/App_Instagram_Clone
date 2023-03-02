@@ -174,12 +174,20 @@ final class RegistrationController: UIViewController {
             self,
             action: #selector(textDidChange),
             for: .editingChanged)
-        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(
+            self,
+            action: #selector(textDidChange),
+            for: .editingChanged
+        )
         fullNameTextField.addTarget(
             self,
             action: #selector(textDidChange),
             for: .editingChanged)
-        userNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        userNameTextField.addTarget(
+            self,
+            action: #selector(textDidChange),
+            for: .editingChanged
+        )
     }
 }
 
@@ -201,7 +209,10 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         plusPhotoButton.layer.masksToBounds = true
         plusPhotoButton.layer.borderWidth = 2
         plusPhotoButton.layer.borderColor = UIColor.white.cgColor
-        plusPhotoButton.setImage(selectImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        plusPhotoButton.setImage(
+            selectImage.withRenderingMode(.alwaysOriginal),
+            for: .normal
+        )
         
         dismiss(animated: true)
     }
