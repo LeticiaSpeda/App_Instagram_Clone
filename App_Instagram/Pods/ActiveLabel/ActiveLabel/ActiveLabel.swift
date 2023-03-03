@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol ActiveLabelDelegate: class {
+public protocol ActiveLabelDelegate: AnyObject {
     func didSelect(_ text: String, type: ActiveType)
 }
 
@@ -226,6 +226,12 @@ typealias ElementTuple = (range: NSRange, element: ActiveElement, type: ActiveTy
             selectedElement = nil
         case .stationary:
             break
+        case .regionEntered:
+            <#code#>
+        case .regionMoved:
+            <#code#>
+        case .regionExited:
+            <#code#>
         @unknown default:
             break
         }
