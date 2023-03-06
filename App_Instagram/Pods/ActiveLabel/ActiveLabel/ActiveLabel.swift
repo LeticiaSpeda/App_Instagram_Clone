@@ -224,14 +224,6 @@ typealias ElementTuple = (range: NSRange, element: ActiveElement, type: ActiveTy
         case .cancelled:
             updateAttributesWhenSelected(false)
             selectedElement = nil
-        case .stationary:
-            break
-        case .regionEntered:
-            <#code#>
-        case .regionMoved:
-            <#code#>
-        case .regionExited:
-            <#code#>
         @unknown default:
             break
         }
